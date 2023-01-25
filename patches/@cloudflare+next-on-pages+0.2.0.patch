@@ -1,5 +1,5 @@
 diff --git a/node_modules/@cloudflare/next-on-pages/dist/index.js b/node_modules/@cloudflare/next-on-pages/dist/index.js
-index 7592663..d5ec43b 100644
+index 7592663..2886959 100644
 --- a/node_modules/@cloudflare/next-on-pages/dist/index.js
 +++ b/node_modules/@cloudflare/next-on-pages/dist/index.js
 @@ -5868,35 +5868,6 @@ var prepVercel = async () => {
@@ -70,14 +70,18 @@ index 7592663..d5ec43b 100644
    });
    console.log("\u26A1\uFE0F Generated '.vercel/output/static/_worker.js'.");
  };
-@@ -6253,6 +6240,7 @@ var main = async ({
+@@ -6253,8 +6240,10 @@ var main = async ({
          "node_modules",
          ".vercel",
          ".next",
 +        ".preview",
          "package-lock.json",
-         "yarn.lock"
+-        "yarn.lock"
++        "yarn.lock",
++        ".husky"
        ],
+       ignoreInitial: true
+     }).on("all", () => {
 diff --git a/node_modules/@cloudflare/next-on-pages/templates/_worker.js/index.ts b/node_modules/@cloudflare/next-on-pages/templates/_worker.js/index.ts
 index 42bf66a..a26d216 100644
 --- a/node_modules/@cloudflare/next-on-pages/templates/_worker.js/index.ts
