@@ -1,10 +1,13 @@
-import Image from 'next/image'
 import { Inter } from '@next/font/google'
+import Image from 'next/image'
+
 import styles from './page.module.css'
+
+import type { FC } from 'react'
 
 const inter = Inter({ subsets: ['latin'] })
 
-export default function Home() {
+const Home: FC = () => {
   return (
     <main className={styles.main}>
       <div className={styles.description}>
@@ -89,3 +92,5 @@ export default function Home() {
     </main>
   )
 }
+
+export default Home

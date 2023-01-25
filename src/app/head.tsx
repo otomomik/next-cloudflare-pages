@@ -1,4 +1,6 @@
-export default function Head() {
+import type { FC } from 'react'
+
+const Head: FC = () => {
   return (
     <>
       <title>Create Next App</title>
@@ -8,3 +10,5 @@ export default function Head() {
     </>
   )
 }
+
+export default Head
