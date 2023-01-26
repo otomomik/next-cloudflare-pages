@@ -1,8 +1,5 @@
-import { getEnv } from '@/utils'
-
 const handler = (): Response => {
-  const env = getEnv()
-  return new Response(JSON.stringify(env), {
+  return new Response('Hello World!!', {
     status: 200,
     headers: {
       'content-type': 'application/json',
