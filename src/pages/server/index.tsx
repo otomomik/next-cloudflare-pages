@@ -1,5 +1,7 @@
 import Link from 'next/link'
 
+import { getApiUrl } from '@/utils'
+
 import type { GetServerSideProps } from 'next'
 import type { FC } from 'react'
 
@@ -8,7 +10,7 @@ interface Props {
 }
 
 export const getServerSideProps: GetServerSideProps<Props> = async () => {
-  const result = await fetch('http://localhost:3000/api/hello')
+  const result = await fetch(`${getApiUrl()}/api/hello`)
   const text = await result.text()
   return {
     props: {
