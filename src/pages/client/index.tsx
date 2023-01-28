@@ -2,13 +2,15 @@
 import Link from 'next/link'
 import { useState, useEffect } from 'react'
 
+import { getApiUrl } from '@/utils'
+
 import type { FC } from 'react'
 
 const Client: FC = () => {
   const [text, setText] = useState('')
 
   useEffect(() => {
-    void fetch('/api/hello').then(async (result) => {
+    void fetch(`${getApiUrl()}/api/hello`).then(async (result) => {
       const text = await result.text()
       setText(text)
     })
